@@ -3,7 +3,7 @@
 
 .modal-gallery{
     // border: 1px solid blue;
-    width: 540px;
+    width: 550px;
     &__background{
         @include mixins.model-background;
         display: none;
@@ -36,7 +36,7 @@
     &__thumnails{
             display: flex;
             justify-content: space-between;
-            width: 500px;
+            width: 450px;
             margin: auto;
         }
 

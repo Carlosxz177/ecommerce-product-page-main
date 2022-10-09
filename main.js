@@ -82,8 +82,11 @@ previusGalleryBtn.addEventListener('click', ()=>{
 //Mostrar el modal de imagenes cuando hago click en la imagen principal.
 const imagesModal = document.querySelector('.modal-gallery__background');
 const closeModalBtn = document.querySelector('.modal-gallery__close');
+
 imageContainer.addEventListener("click", () => {
+    if(window.innerWidth >= 1115){
    imagesModal.style.display = "grid";
+    }
 });
 
 closeModalBtn.addEventListener('click', ()=>{
@@ -100,7 +103,7 @@ thumbnails.forEach(thumbnails => {
    
         imageContainer.style.backgroundImage = `url('../images/image-product-${event.target.id}.jpg') `
     });
-})
+});
             
 //Cambiar las imagenes principales desde los thumnails en el MODAL
 let modalThumbnail = document.querySelectorAll('.modal-gallery__thumnail')
@@ -128,13 +131,13 @@ nextModalBtn.addEventListener('click', ()=>{
  
 
   //Mostrar el navbar cuando presiono el menu de hamburguesa
- const headerMenu = document.querySelector('.header__menu');
+ const hamburgerMenu = document.querySelector('.header__menu');
  const modalNavbar = document.querySelector('.model-navbar__background');
  const closeModalNavbar = document.querySelector('.model-navbar__close-icon')
 
  modalNavbar.style.display = 'none'
 
-  headerMenu.addEventListener('click', ()=>{
+ hamburgerMenu.addEventListener('click', ()=>{
    modalNavbar.style.display = 'block';
 });
 
